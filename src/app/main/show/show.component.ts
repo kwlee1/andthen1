@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { StoryService } from '../../story.service';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-show',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowComponent implements OnInit {
 
-  constructor() { }
+	id;
+	story;
 
-  ngOnInit() {
-  }
+	constructor(private _storyService: StoryService, private _route: ActivatedRoute, private _router: Router) {
+		this._route.paramMap.subscribe(params=>{
+			this.id=params.get("id");
+		})
+	}
+
+	ngOnInit() {
+		this._storyService.one(this.id, res=>{
+			this.story=res;
+		})
+	}
 
 }
