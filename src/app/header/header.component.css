@@ -1,0 +1,13 @@
+#header{
+    background: #00b3b3; 
+    display: inline-block; 
+}
+#title{
+    display: inline-block; 
+    font-size: 32pt; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bold;  
+}
+#login{
+    display: inline-block; 
+}

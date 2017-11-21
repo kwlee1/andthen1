@@ -1,11 +1,14 @@
-<h1>AndThen.com </h1>
-<div>
-	<span *ngIf="username">Welcome {{username}}! <a (click)="logout()">Logout</a></span>
-	<span *ngIf="!username">Welcome! Please <a (click)="showlogin=true">login</a></span>
-	<form *ngIf="showlogin" (submit)="login()" #loginForm="ngForm">
-		<label for="name">Username:</label>
-		<input type="text" name="name" id="name" required [(ngModel)]="name" #user_name="ngModel">
-		<button type="button" (click)="showlogin=false">Cancel</button>
-		<input type="submit" value="Login" [disabled]="loginForm.invalid">
-	</form>
+<div id='header'>
+  <span id='title'>AndThen.com</span>
+  <div id='login'>
+    <span *ngIf="username">Welcome {{username}}! <a (click)="logout()">Logout</a></span>
+    <span *ngIf="!username">Welcome! Please <a (click)="showlogin=true">login</a></span>
+    <form *ngIf="showlogin" (submit)="login()" #loginForm="ngForm">
+      <label for="name">Username:</label>
+      <input type="text" name="name" id="name" required [(ngModel)]="name" #user_name="ngModel">
+      <button type="button" (click)="showlogin=false">Cancel</button>
+      <input type="submit" value="Login" [disabled]="loginForm.invalid">
+    </form>
+  </div><br>
+  
 </div>
