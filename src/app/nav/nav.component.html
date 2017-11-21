@@ -1,3 +1,4 @@
+<div id="nav">
 <h3>Click a Story to get started!</h3>
 <label for="searchstories">Search:</label>
 <input type="text" name="searchstories" id="searchstories" [(ngModel)]="search" (ngModelChange)="filter()">
@@ -14,3 +15,5 @@
 	</ul>
 </div>
 <h3><a [routerLink]="['/stories', 'new']">Or start your own story!</a></h3>
+</div>
+
