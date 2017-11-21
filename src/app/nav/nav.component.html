@@ -1,3 +1,16 @@
-<p>
-  nav works!
-</p>
+<h3>Click a Story to get started!</h3>
+<label for="searchstories">Search:</label>
+<input type="text" name="searchstories" id="searchstories" [(ngModel)]="search" (ngModelChange)="filter()">
+<label for="by">By:</label>
+<select name="filterby" id="filterby" [(ngModel)]="filterparams" (ngModelChange)="filter()">
+	<option value="title">Title</option>
+	<option value="author">Author</option>
+</select>
+<div *ngFor="let story of displayed">
+	<p>Title: <a [routerLink]="['/stories', story._id]">{{story.title}}</a></p>
+	<ul>
+		<li>By: {{story.author}}</li>
+		<li>Entries so far: {{story.entries.length}}</li>
+	</ul>
+</div>
+<h3><a [routerLink]="['/stories', 'new']">Or start your own story!</a></h3>
