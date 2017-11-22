@@ -4,7 +4,7 @@
 	<span *ngFor="let entry of story?.entries">{{entry.content}} </span>
 </p>
 <form (submit)="addEntry()" #newEntry="ngForm">
-	<label for="entry">Add to the story:</label>
+	<label for="entry">Add to the story:</label><br>
 	<textarea name="entry" id="entry" cols="30" rows="10" required [(ngModel)]="entry.content" #content></textarea>
 	<input type="submit" value="Add" [disabled]="newEntry.invalid">
 </form>

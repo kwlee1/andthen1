@@ -1,6 +1,6 @@
-#nav{
-    background-color: green; 
+#nav{ 
     display: inline-block; 
     width: 30%; 
     height: 500px; 
+    font-weight: bold; 
 }

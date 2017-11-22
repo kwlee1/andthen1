@@ -1,6 +1,6 @@
 #header{
-    background: #00b3b3; 
     display: inline-block; 
+    margin: 10px; 
 }
 #title{
     display: inline-block; 
@@ -9,5 +9,8 @@
     font-weight: bold;  
 }
 #login{
+    display: inline-block; 
+}
+#about{
     display: inline-block; 
 }

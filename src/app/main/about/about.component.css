@@ -1,0 +1,9 @@
+#about{
+    display: inline-block; 
+    width: 45%; 
+    vertical-align: top; 
+    font-weight: bold; 
+    background-color:rgba(0,204,255,0.5);
+    margin: 15px; 
+    padding: 5px; 
+}
