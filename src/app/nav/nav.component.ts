@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StoryService } from '../story.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -12,13 +13,17 @@ export class NavComponent implements OnInit {
 	displayed;
 	search="";
 	filterparams="title"
-	constructor(private _storyService: StoryService) { }
+	constructor(private _storyService: StoryService, private _router: Router) {
+		this._router.events.subscribe(event=>{
+			this._storyService.all(res=>{
+				this.stories=res;
+				this.displayed=this.stories.filter(story=>story[this.filterparams].includes(this.search));
+			})
+		})
+	}
 
 	ngOnInit() {
-		this._storyService.all(res=>{
-			this.stories=res;
-			this.displayed=this.stories;
-		})
+
 	}
 
 	filter(){

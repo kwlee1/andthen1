@@ -18,14 +18,13 @@ export class ShowComponent implements OnInit {
 	constructor(private _storyService: StoryService, private _route: ActivatedRoute, private _router: Router) {
 		this._route.paramMap.subscribe(params=>{
 			this.id=params.get("id");
+			this._storyService.one(this.id, res=>{
+				this.story=res;
+			})
 		})
 	}
 
-	ngOnInit() {
-		this._storyService.one(this.id, res=>{
-			this.story=res;
-		})
-	}
+	ngOnInit() {}
 
 	addEntry(){
 		var user=this._storyService.getUsername();
