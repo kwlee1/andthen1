@@ -6,11 +6,13 @@ import { ShowComponent } from './main/show/show.component';
 import { AboutComponent } from './main/about/about.component';
 
 const routes: Routes = [
+	{path: "", pathMatch: "full", redirectTo: "/about"},
 	{path: "", component: MainComponent, children:[
+		{path: "about", pathMatch: "full", component:AboutComponent },
 		{path: "stories/new", pathMatch: "full", component: NewComponent},
 		{path: "stories/:id", component: ShowComponent}
 	]},
-	{path: "about", pathMatch: "full", component:AboutComponent }
+
 ];
 
 @NgModule({

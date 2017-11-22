@@ -1,8 +1,10 @@
 <h3>Start a New Story</h3>
 <form (submit)="create()" #createStory="ngForm">
 	<label for="title">Title:</label>
-	<input type="text" name="title" id="tile" required [(ngModel)]="story.title" #title="ngModel">
+	<input type="text" name="title" id="tile" required [(ngModel)]="story.title" #title="ngModel" class="input">
+	<br>
 	<label for="content">Start off the story:</label>
-	<textarea name="content" id="content" cols="30" rows="10" required [(ngModel)]="entry.content" #content="ngModel"></textarea>
-	<input type="submit" value="Create New Story" [disabled]="createStory.invalid">
+	<br>
+	<textarea name="content" id="content" cols="30" rows="10" required maxlength="200" [(ngModel)]="entry.content" #content="ngModel" class="input"></textarea>
+	<input type="submit" value="Create New Story" [disabled]="createStory.invalid" id="createnew" class="input">
 </form>

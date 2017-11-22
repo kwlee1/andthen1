@@ -3,3 +3,6 @@ body{
     background-image: url('assets/img/wall1.jpg'); 
     background-size: 100%; 
 }
+.input{
+	border-radius: 3px;
+}

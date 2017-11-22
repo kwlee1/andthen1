@@ -1,8 +1,11 @@
 #main{
     display: inline-block; 
-    width: 65%; 
-    background-color:rgba(0,204,255,0.5);
+    width: 500px; 
+    background-color:rgba(180,204,255,0.8);
     vertical-align: top; 
-    padding: 5px; 
-    font-weight: bold; 
+    padding: 10px; 
+	font-weight: bold;
+	margin: 20px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px black;
 }

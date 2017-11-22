@@ -5,12 +5,10 @@
     <span *ngIf="!username">Welcome! Please <a (click)="showlogin=true">login</a></span>
     <form *ngIf="showlogin" (submit)="login()" #loginForm="ngForm">
       <label for="name">Username:</label>
-      <input type="text" name="name" id="name" required [(ngModel)]="name" #user_name="ngModel">
-      <button type="button" (click)="showlogin=false">Cancel</button>
-      <input type="submit" value="Login" [disabled]="loginForm.invalid">
+      <input type="text" name="name" id="name" required [(ngModel)]="name" #user_name="ngModel" class="input">
+      <button type="button" (click)="showlogin=false" class="input">Cancel</button>
+      <input type="submit" value="Login" [disabled]="loginForm.invalid" class="input">
     </form>
   </div>
-  <div id="about"> <a [routerLink]="['/about']"> About AndThen.com</a></div>
-  <br>
-  
+  <div id="about"><a [routerLink]="['/about']"> About AndThen.com</a></div>
 </div>

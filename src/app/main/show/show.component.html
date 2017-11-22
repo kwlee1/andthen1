@@ -5,6 +5,6 @@
 </p>
 <form (submit)="addEntry()" #newEntry="ngForm">
 	<label for="entry">Add to the story:</label><br>
-	<textarea name="entry" id="entry" cols="30" rows="10" required [(ngModel)]="entry.content" #content></textarea>
-	<input type="submit" value="Add" [disabled]="newEntry.invalid">
+	<textarea name="entry" id="entry" cols="30" rows="10" required maxlength="200" [(ngModel)]="entry.content" #content="ngModel" class="input"></textarea>
+	<input type="submit" value="Add" [disabled]="newEntry.invalid" id="addentry" class="input">
 </form>

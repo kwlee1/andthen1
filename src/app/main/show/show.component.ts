@@ -33,7 +33,6 @@ export class ShowComponent implements OnInit {
 		}
 		this.entry.user=user;
 		this.story.entries.push(this.entry);
-		console.log(this.story);
 		this._storyService.update(this.story, res=>{
 			this._storyService.one(this.id, res=>{
 				this.story=res;
